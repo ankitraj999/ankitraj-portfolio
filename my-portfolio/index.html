@@ -1,0 +1,293 @@
+<!DOCTYPE HTML>
+<!--
+	Miniport by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Ankit Raj Portfolio</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body class="is-preload">
+
+		<!-- Nav -->
+			<nav id="nav">
+				<ul class="container">
+					<li><a href="#top">Intro</a></li>
+					<li><a href="#work">Work Experience</a></li>
+					<li><a href="#portfolio">Projects</a></li>
+					<li><a href="#contact">Award and Publications</a></li>
+					<li><a href="#contact">Contact</a></li>
+				</ul>
+			</nav>
+
+		<!-- Home -->
+		
+		  
+		  <script>
+			function scrollText() {
+			  var element = document.getElementById('scrollingText');
+			  var parent = document.getElementById('welcomeMsg');
+			  var distance = parent.offsetWidth;
+			  var speed = 50; // Lower is faster
+		  
+			  function step() {
+				element.style.transform = `translateX(${distance}px)`;
+				distance--;
+		  
+				if (distance < -element.offsetWidth) {
+				  distance = parent.offsetWidth;
+				}
+		  
+				requestAnimationFrame(step);
+			  }
+		  
+			  step();
+			}
+		  
+			window.onload = scrollText;
+		  </script>
+		  	<div id="welcomeMsg" class="text-info font-italic" style="overflow: hidden; width: 100%;">
+				<h4 id="scrollingText" style="white-space: nowrap; display: inline-block;">
+				  &nbsp; &nbsp; Actively looking for full time software Engineering position !! &nbsp; &nbsp;
+				</h4>
+			  </div>
+			<article id="top" class="wrapper style1">
+				<div class="container">
+					<div class="row">
+						<div class="col-4 col-5-large col-12-medium" style="display: flex; align-items: center;" >
+							<!-- <div>
+
+							<span class="image fit"><img src="images/IMG_2590.jpg" alt="" /></span>
+						</div>
+							<div>
+								<span>
+									<strong>Master in Computer Science</strong>
+									<strong>California State University, Long Beach</strong>
+									<strong>2023 - 2024</strong>
+								</span>
+							</div> -->
+							<div style="text-align: center;">
+								<span class="image fit" style="margin-bottom: 75px;">
+								  <img src="images/IMG_2590.jpg" alt="" style="max-width: 100%; height: auto;"/>
+								</span>
+								<div style="text-align: center;">
+								  <strong style="display: block; margin-bottom: 5px;">Master in Computer Science</strong>
+								  <strong style="display: block; margin-bottom: 5px;">California State University, Long Beach</strong>
+								  <strong style="display: block;">2023 - 2024</strong>
+								</div>
+							  </div>
+						</div>
+						<div class="col-8 col-7-large col-12-medium">
+							<header>
+								<h1>Hi. I'm <strong>Ankit Raj</strong>.</h1>
+							</header>
+							<p>A dedicated and innovative professional with a strong background in <strong>Machine learning and Full-stack development</strong>.<p>I am currently pursuing my Master in Computer Science at <a href="https://www.csulb.edu" target="_blank">California State University Long Beach</a>, where I focus on application of advanced artificial intelligence and machine vision in software development.
+							<br>In my recent role as a Graduate Student Researcher, I've been working on cutting-edge projects involving Large Language Models (LLMs) and their applications in software engineering. This work has further honed my skills in machine learning, data processing, and AI-driven solutions.</p>
+							<!-- <a href="#work" class="button large scrolly">Learn about My experience</a> -->
+						</div>
+					</div>
+				</div>
+			</article>
+
+		<!-- Work -->
+			<article id="work" class="wrapper style2">
+				<div class="container">
+					<header>
+						<h2>Professional Experience and Responsibilities</h2>
+						<p>Delivered projects that improved client satisfaction and operational efficiency.</p>
+					</header>
+					<div class="row aln-center">
+						<div class="col-4 col-6-medium col-12-small">
+							<section class="box style1" style="height: 1000px; overflow-y: auto;">
+								
+								<img src="images/csulb-logo.png" alt="NTT Data Logo" class="company-logo">
+								<h3><a href="https://www.csulb.edu">CSU Long Beach</a></h3>
+								<h5>Graduate Student Researcher</h5>
+								<h9>February 2024 - Present</h9>
+								<p><ul>
+									<li>Leading end-to-end development of LLMs for software engineering applications, focusing on enhancing software requirement documents through ambiguity detection and quality improvement.</li>
+									
+									<li>Implemented scalable data loaders for text and multimodal data, preprocessing and structuring software documentation with a custom NLP pipeline using SpaCy and NLTK, achieving 95% accuracy in identifying key requirements.</li>
+									
+									<li>Developed LLM-based products for software requirement analysis, including fine-tuning models to detect unclear specifications, vague requirements, conflicting statements, and incomplete information.</li>
+									
+									<li>Designed and modified LLM architectures for optimal performance in software-specific tasks, applying Low-Rank Adaptation (LoRA) technique to fine-tune base LLM models, resulting in a 30% reduction in training time.</li>
+								  </ul></p>
+							</section>
+						</div>
+						<div class="col-4 col-6-medium col-12-small">
+							<section class="box style1" style="height: 1000px; overflow-y: auto;">
+								<img src="images/ntt-data-logo.jpeg" alt="NTT Data Logo" class="company-logo">
+								<h3><a href="https://us.nttdata.com/en">NTT Data</a></h3>
+								<h5>Senior Software Engineer</h5>
+								<h9>December 2021 - December 2022</h9>
+								<p><ul><li> Utilized RAML to define and create comprehensive API specifications, ensuring standardized, well-documented and consistent API design.</li>
+									<li>Developed 50+ RESTful APIs using Mulesoft platform components including API Manager, AnyPoint Studio, Dataweave and leveraging CI/CD pipelines for hosting on the MuleSoft cloudHub.
+									<li> Developed 10+ integration apps using DataWeave for seamless data mapping between systems via consumption of RESTful API endpoints. Configured APIs security , API portals, and API analytics using MuleSoft API Manager.</li>
+									<li> Implemented robust security features, such as OAuth authorization and basic authentication (client ID and client secret), to secure APIs and integrated Twilio to enable SMS notifications as part of API-driven solutions, providing an additional communication channel for stakeholders.</li></ul></p>
+							</section>
+						</div>
+						<div class="col-4 col-6-medium col-12-small">
+							<section class="box style1" style="height: 1000px; overflow-y: auto;">
+								<img src="images/capgemini-logo.jpeg" alt="Capgemini India Logo" class="company-logo">
+								<h3><a href="https://www.capgemini.com/in-en/">Capgemini India</a></h3>
+								<h5>Associate Consultant</h5>
+								<h9>February 2019 - December 2021</h9>
+								<p><ul><li>Automation Testing: Automated testing of a Commercial Banking application using Behaviour Driven Development Framework, reducing manual effort by 80% and improving system functionality.</li>
+									<li> Java Utility: Enhanced performance and streamline operations of application by developing java utility using Object- Oriented design that could connect and retrieve customers records from MongoDB and Mainframe for validation and verification with on screen information of client E-commercial banking site and cut down manual tasks by 40%.</li>
+									<li>Impact: Created java utility to store, manage and use test data from Excel sheet which improved overall performance of the Automation Testing application improving system reliability by 50%.</li></ul></p>
+							</section>
+						</div>
+					</div>
+					<!-- <footer>
+						<p>Lorem ipsum dolor sit sapien vestibulum ipsum primis?</p> -->
+						<!-- <a href="#portfolio" class="button large scrolly">See some of my recent work</a>
+					</footer> --> 
+				</div>
+			</article>
+
+		<!-- Portfolio -->
+			<article id="portfolio" class="wrapper style3">
+				<div class="container">
+					<header>
+						<h2>My Projects Overview</h2>
+						<p>I created some of the interesting project which added to my learning</p>
+					</header>
+					<div class="row">
+						<div class="col-4 col-6-medium col-12-small">
+							<article class="box style2">
+								<a href="#" class="image featured"><img src="images/evabank.png" alt="" /></a>
+								<h3><a href="https://ankitraj999.github.io/evabank/">Eva Bank</a></h3>
+								<p>This project showcases a static website for Eva Bank using HTML, CSS,Bootstrap and JavaScript. It used local and session storage to store customer data</p>
+							    <p><a href="https://github.com/ankitraj999/evabank">Github Link</a></p>
+							</article>
+						</div>
+						<div class="col-4 col-6-medium col-12-small">
+							<article class="box style2">
+								<a href="#" class="image featured"><img src="images/pic02.jpg" alt="" /></a>
+								<h3><a href="#">VeriLink</a></h3>
+								<p>Ornare nulla proin odio consequat.</p>
+							</article>
+						</div>
+						<div class="col-4 col-6-medium col-12-small">
+							<article class="box style2">
+								<a href="#" class="image featured"><img src="images/pic03.jpg" alt="" /></a>
+								<h3><a href="#">Surveillance LLM</a></h3>
+								<p>Ornare nulla proin odio consequat.</p>
+							</article>
+						</div>
+						<div class="col-4 col-6-medium col-12-small">
+							<article class="box style2">
+								<a href="#" class="image featured"><img src="images/pic04.jpg" alt="" /></a>
+								<h3><a href="#">Smart Travelling App</a></h3>
+								<p>Ornare nulla proin odio consequat.</p>
+							</article>
+						</div>
+						<div class="col-4 col-6-medium col-12-small">
+							<article class="box style2">
+								<a href="#" class="image featured"><img src="images/pic05.jpg" alt="" /></a>
+								<h3><a href="#">Chatbot using RAG</a></h3>
+								<p>Ornare nulla proin odio consequat.</p>
+							</article>
+						</div>
+						<div class="col-4 col-6-medium col-12-small">
+							<article class="box style2">
+								<a href="#" class="image featured"><img src="images/pic06.jpg" alt="" /></a>
+								<h3><a href="#">Telecom Customers Analysis</a></h3>
+								<p>Ornare nulla proin odio consequat.</p>
+							</article>
+						</div>
+					</div>
+					<footer>
+						<p>Lorem ipsum dolor sit sapien vestibulum ipsum primis?</p>
+						<!-- <a href="#contact" class="button large scrolly">Get in touch with me</a> -->
+					</footer>
+				</div>
+			</article>
+
+		<!-- Contact -->
+			<article id="contact" class="wrapper style4">
+				<div class="container medium">
+					<!-- <header> -->
+						<h2>Awards and Publications</h2>
+						<!-- <p>Ornare nulla proin odio consequat sapien vestibulum ipsum.</p> -->
+					<!-- </header> -->
+					 <div>
+						<h3>Awards</h3>
+						<ul>
+							<li><p>Star Performance Award, August 2022 : I was selected for this esteem award for delivering high quality solutions using Mulesoft technology at NTT Data(Apisero).</p></li>
+							<li><p>Apihana Certificate of Achievement : I was acknowledged for professionalism and willingness to go above and beyond
+								to support team members at NTT Data(Apisero).</p></li>
+						</ul>
+					
+
+						<h3>Publications</h3>
+						<ul>
+							<li><p>My paper - <a href="https://drive.google.com/file/d/1A8H9mbnxpqBAFFx5R7BmtX3W1xpc-jqb/view?usp=sharing">"Enhancing Software Requirements Quality:Ambiguity Detection and Resolution Using Large Language Models"</a> was published in The 22nd International Conference on Software Engineering Research & Practice (SERP'24)</p></li>
+						</ul>
+						
+					 </div>
+					<div class="row">
+						<!-- <div class="col-12">
+							<form method="post" action="#">
+								<div class="row">
+									<div class="col-6 col-12-small">
+										<input type="text" name="name" id="name" placeholder="Name" />
+									</div>
+									<div class="col-6 col-12-small">
+										<input type="text" name="email" id="email" placeholder="Email" />
+									</div>
+									<div class="col-12">
+										<input type="text" name="subject" id="subject" placeholder="Subject" />
+									</div>
+									<div class="col-12">
+										<textarea name="message" id="message" placeholder="Message"></textarea>
+									</div>
+									<div class="col-12">
+										<ul class="actions">
+											<li><input type="submit" value="Send Message" /></li>
+											<li><input type="reset" value="Clear Form" class="alt" /></li>
+										</ul>
+									</div>
+								</div>
+							</form>
+						</div>-->
+						<div class="col-12">
+							<hr />
+							<h3>Connect with me on ..</h3>
+							<br>
+							<ul class="social">
+								<!-- <li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li> -->
+								<li><a href="mailto:ankitzraj999@gmail.com" class="icon fas fa-envelope-open"><span class="label">Gmail</span></a></li>
+								<li><a href="https://www.instagram.com/ankit.the.raj/" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+								<li><a href="https://www.linkedin.com/in/ankitzraj/" class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+								<!-- <li><a href="#" class="icon brands fa-tumblr"><span class="label">Tumblr</span></a></li>
+								<li><a href="#" class="icon brands fa-google-plus"><span class="label">Google+</span></a></li> -->
+								<li><a href="https://github.com/ankitraj999" class="icon brands fa-github"><span class="label">Github</span></a></li>
+								
+							</ul>
+							<hr />
+						</div>
+					</div> 
+					<footer>
+						<ul id="copyright">
+							<li>&copy; ankitzraj. All rights reserved.</li><li>Go to: <a href="#">Top</a></li>
+						</ul>
+					</footer>
+				</div>
+			</article>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
