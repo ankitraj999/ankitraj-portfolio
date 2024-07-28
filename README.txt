@@ -1,0 +1,1 @@
+This portfolio provide a proper description about my professional journey.
