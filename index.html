@@ -12,6 +12,31 @@
 		<link rel="stylesheet" href="assets/css/main.css" />
 	</head>
 	<body class="is-preload">
+		<style>
+    #nav ul {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0;
+        list-style: none;
+    }
+    #nav ul li {
+        flex: 1 1 auto;
+        text-align: center;
+        margin: 5px 0;
+    }
+    #nav ul li a {
+        display: block;
+        padding: 10px;
+        text-decoration: none;
+        color: #000;
+    }
+    @media (max-width: 768px) {
+        #nav ul {
+            flex-direction: column;
+        }
+    }
+</style>
+
 
 		<!-- Nav -->
 			<nav id="nav">
