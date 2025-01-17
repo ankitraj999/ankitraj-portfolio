@@ -474,6 +474,129 @@ additional communication channel for stakeholders.</li>
 			</div>
 		</article>
 
+
+
+		<article id="skills" class="wrapper styple1">
+			<header>
+					<h2>Skills and Expertise</h2>
+				</header>
+			<div class="skills-carousel">
+				<div class="skills-container">
+					<div class="skill">
+						<i class="fab fa-google"></i>
+						<span>GCP</span>
+					</div>
+					<div class="skill">
+						<i class="fab fa-aws"></i>
+						<span>AWS</span>
+					</div>
+					<div class="skill">
+						<i class="fas fa-database"></i>
+						<span>MongoDB</span>
+					</div>
+					<div class="skill">
+						<i class="fas fa-database"></i>
+						<span>MySQL</span>
+					</div>
+					<div class="skill">
+						<i class="fas fa-chart-bar"></i>
+						<span>Tableau</span>
+					</div>
+					<div class="skill">
+						<i class="fas fa-server"></i>
+						<span>Web Services</span>
+					</div>
+					<div class="skill">
+						<i class="fas fa-network-wired"></i>
+						<span>MuleSoft</span>
+					</div>
+					<div class="skill">
+						<i class="fas fa-vial"></i>
+						<span>Selenium</span>
+					</div>
+					<div class="skill">
+						<i class="fab fa-docker"></i>
+						<span>Docker</span>
+					</div>
+					<div class="skill">
+						<i class="fas fa-cogs"></i>
+						<span>API Management</span>
+					</div>
+					<div class="skill">
+						<i class="fas fa-sync-alt"></i>
+						<span>CI/CD</span>
+					</div>
+					<div class="skill">
+						<i class="fab fa-git-alt"></i>
+						<span>GIT</span>
+					</div>
+					<div class="skill">
+						<i class="fas fa-fire"></i>
+						<span>Firebase</span>
+					</div>
+					<div class="skill">
+						<i class="fas fa-cubes"></i>
+						<span>Kubernetes</span>
+					</div>
+					<div class="skill">
+						<i class="fab fa-node-js"></i>
+						<span>NodeJS</span>
+					</div>
+					<div class="skill">
+						<i class="fab fa-node-js"></i>
+						<span>ExpressJS</span>
+					</div>
+					<div class="skill">
+						<i class="fab fa-react"></i>
+						<span>ReactJS</span>
+					</div>
+					<div class="skill">
+						<i class="fas fa-project-diagram"></i>
+						<span>GraphQL</span>
+					</div>
+					<div class="skill">
+						<i class="fab fa-react"></i>
+						<span>NextJS</span>
+					</div>
+				
+		
+			<script>
+				let currentPosition = 0;
+				const skillsContainer = document.querySelector('.skills-container');
+				const skillWidth = document.querySelector('.skill').offsetWidth;
+				const visibleSkills = 5;
+				const totalSkills = skillsContainer.children.length;
+		
+				function moveCarousel(direction) {
+					currentPosition = (currentPosition + direction + totalSkills) % totalSkills;
+					updateCarouselPosition();
+				}
+		
+				function updateCarouselPosition() {
+					skillsContainer.style.transform = `translateX(-${currentPosition * skillWidth}px)`;
+				}
+		
+				function autoScroll() {
+					moveCarousel(1);
+				}
+		
+				// Start auto-scrolling
+				const scrollInterval = setInterval(autoScroll, 3000); // Change slide every 3 seconds
+		
+				// Pause auto-scrolling when hovering over the carousel
+				skillsContainer.addEventListener('mouseenter', () => {
+					clearInterval(scrollInterval);
+				});
+		
+				// Resume auto-scrolling when mouse leaves the carousel
+				skillsContainer.addEventListener('mouseleave', () => {
+					clearInterval(scrollInterval);
+					setInterval(autoScroll, 3000);
+				});
+			</script>
+		</article>
+
+
 		<!-- Portfolio -->
 			<article id="portfolio" class="wrapper style3">
 				<div class="container">

@@ -2444,4 +2444,43 @@ input, select, textarea {
 
 	}
 
-
+	.skills-carousel {
+		max-width: auto;
+		margin: 20px auto;
+		position: relative;
+		overflow: hidden;
+	}
+	.skills-container {
+		display: flex;
+		transition: transform 0.5s ease;
+	}
+	.skill {
+		flex: 0 0 20%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		padding: 10px;
+		box-sizing: border-box;
+	}
+	.skill i {
+		font-size: 2em;
+		margin-bottom: 5px;
+		color: #3498db;
+	}
+	.skill span {
+		text-align: center;
+		font-size: 0.9em;
+	}
+	.carousel-control {
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		background-color: rgba(0,0,0,0.5);
+		color: white;
+		padding: 10px;
+		text-decoration: none;
+		font-size: 18px;
+		z-index: 10;
+	}
+	.carousel-control.prev { left: 0; }
+	.carousel-control.next { right: 0; }
