@@ -10,6 +10,260 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+      
+
+		<style>
+              #name {
+      font-family: 'Arial', sans-serif;
+      font-size: 1.8em;
+      margin-bottom: 10px;
+      color: #110f0f;
+      text-align: auto;
+      opacity: 0;
+      animation: fadeIn 2s forwards, scaleIn 1s ease-out 1.5s forwards;
+    }
+
+    #name strong {
+      color: #5e5959;
+      animation: nameAnimation 3s ease-out forwards, colorChange 4s infinite alternate;
+    }
+
+    /* Animation for fading in the entire text */
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Animation for scaling up the entire text */
+    @keyframes scaleIn {
+      0% {
+        transform: scale(0.5);
+      }
+      100% {
+        transform: scale(1);
+      }
+    }
+
+    /* Animation for the name appearing with a side-to-side motion */
+    @keyframes nameAnimation {
+      0% {
+        opacity: 0;
+        transform: translateX(-20px);
+      }
+      50% {
+        opacity: 0.5;
+        transform: translateX(10px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    /* Smooth color transition for the name */
+    @keyframes colorChange {
+      0% {
+        color: #9fa3c2;
+      }
+      100% {
+        color: #120909;
+      }
+    }       
+			article#top.wrapper.style1 {
+position: relative;
+width: 100%;
+height: 100vh;
+display: flex;
+justify-content: center;
+align-items: center;
+color: rgb(146, 135, 135);
+background: linear-gradient(45deg, #797777, #120f0f);
+animation: backgroundAnimation 10s infinite alternate;
+}	
+
+.wrapper {
+  background-color: #f0f0f0;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+
+
+			   /* Card Animation */
+.container1 {
+	   margin: 10px auto;
+	   background-color: #4f4d4d; /* Grey background */
+	   padding: 40px;
+	   border-radius: 20px;
+	   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+   }           
+			   .card {
+				   border-radius: 15px;
+				   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+				   overflow: hidden;
+				   background-color: #fff;
+				   margin: 20px;
+				   padding: 20px;
+				   transition: transform 0.3s ease, box-shadow 0.3s ease;
+			   }
+		   
+			   .card:hover {
+				   transform: translateY(-10px);
+				   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+			   }
+		   
+			   /* Image Animation */
+			   .card .image img {
+				   max-width: 100%;
+				   height: auto;
+				   border-radius: 10px;
+				   transition: transform 0.3s ease;
+			   }
+		   
+			   .card:hover .image img {
+				   transform: scale(1.05);
+			   }
+		   
+			   /* Text Fade-in Animation */
+			   .card .text-content {
+				   opacity: 0;
+				   transform: translateY(20px);
+				   animation: fadeInUp 1s forwards;
+			   }
+		   
+			   .card:hover .text-content {
+				   animation: fadeInUp 1s forwards;
+			   }
+		   
+			   /* Fade-in Effect */
+			   @keyframes fadeInUp {
+				   from {
+					   opacity: 0;
+					   transform: translateY(20px);
+				   }
+				   to {
+					   opacity: 1;
+					   transform: translateY(0);
+				   }
+			   }
+		   
+			   /* Hover effect on the link */
+			   a {
+				   color: #007bff;
+				   text-decoration: none;
+				   transition: color 0.3s ease;
+			   }
+		   
+			   a:hover {
+				   color: #0056b3;
+			   }
+			   * {box-sizing: border-box}
+body {font-family: Verdana, sans-serif; margin:0}
+.mySlides {display: none}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: auto;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev {
+  cursor: pointer;
+  position: relative;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: rgb(22, 19, 19);
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+.next {
+  cursor: pointer;
+  position: relative;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: rgb(22, 19, 19);
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  right: 0;
+}
+
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #272424;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #322c2c;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #1a1818;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+	</style>
 	</head>
 	<body class="is-preload">
 
@@ -22,7 +276,7 @@
 					<li><a href="#portfolio">Projects</a></li>
 					<li><a href="#contact">Awards and Publications</a></li>
 					<li><a href="#contact">Contact</a></li>
-					<li><a href="https://drive.google.com/file/d/13-Qe01Ll1TLOUeZATLne6nJeSUeDaT1M/view?usp=sharing" target="_blank">Resume</a></li>
+					<li><a href="https://drive.google.com/file/d/1ek0s_ujnN94t0REBHgrS18743aEqSi9e/view?usp=sharing" target="_blank">Resume</a></li>
 				</ul>
 			</nav>
 
@@ -59,91 +313,106 @@
 				</h4>
 			  </div>
 		
-			<article id="top" class="wrapper style1">
-				<div class="container">
-					<div class="row">	
-						<div class="col-4 col-5-large col-12-medium" style="display: flex; align-items: center;" >
-							<!-- <div>
-
-							<span class="image fit"><img src="images/IMG_2590.jpg" alt="" /></span>
-						</div>
-							<div>
-								<span>
-									<strong>Master in Computer Science</strong>
-									<strong>California State University, Long Beach</strong>
-									<strong>2023 - 2024</strong>
-								</span>
-							</div> -->
-							<div style="text-align: center;">
-								<span class="image fit" style="margin-bottom: 75px;">
-								  <img src="images/IMG_2590.jpg" alt="" style="max-width: 100%; height: auto;"/>
-								</span>
+			  <article id="top" class="wrapper style1">
+				<div class="container1">
+					
+					
+					<div class="card">
+						<div class="row">
+							<div class="col-4 col-5-large col-12-medium" style="display: flex; align-items: center; justify-content: center;">
 								<div style="text-align: center;">
-								  <strong style="display: block; margin-bottom: 5px;">Master in Computer Science</strong>
-								  <strong style="display: block; margin-bottom: 5px;">California State University, Long Beach</strong>
-								  <strong style="display: block;">2023 - 2024</strong>
+									<span class="image fit" style="margin-bottom: 20px; border-radius: 10px; overflow: hidden;">
+										<img src="images/IMG_2590.jpg" alt="" style="border-radius: 10px;" />
+									</span>
+									<div style="text-align: center;">
+										<strong style="display: block; margin-bottom: 5px;">MSCS at CSULB (2023 - 2024)</strong>
+										
+									  </div>
+									
 								</div>
-							  </div>
-						</div>
-						<div class="col-8 col-7-large col-12-medium">
-							<header>
-								<h1>Hi. I'm <strong>Ankit Raj</strong>.</h1>
-							</header>
-							<p>A dedicated and innovative professional with a strong background in <strong>Machine learning and Full-stack development</strong>.<p>I am currently pursuing my Master in Computer Science at <a href="https://www.csulb.edu" target="_blank">California State University Long Beach</a>, where I focus on application of advanced artificial intelligence and machine vision in software development.
-							<br>In my recent role as a Graduate Student Researcher, I've been working on cutting-edge projects involving Large Language Models (LLMs) and their applications in software engineering. This work has further honed my skills in machine learning, data processing, and AI-driven solutions.</p>
-							<!-- <a href="#work" class="button large scrolly">Learn about My experience</a> -->
+							</div>
+							<div class="col-8 col-7-large col-12-medium text-content">
+								<header>
+									<h1 id="name">Hello, I'm <strong>Ankit Raj</strong>.</h1>
+								</header>
+								<p style="font-size: 1.1em; line-height: 1.6; color: #444;">
+									<p>A recent Master's graduate in Computer Science from <a href="https://www.csulb.edu" target="_blank">California State University Long Beach</a>, I specialize in blending <strong>Full-Stack Development</strong> with <strong>AI-driven innovation</strong>.</p>
+									<p>From designing intelligent, user-centric interfaces to building scalable, high-performance systems, my expertise in Large Language Models (LLMs) and software engineering equips me to create solutions that drive meaningful change. Let’s shape the future, together.</p>
+								</p>
+							</div>
 						</div>
 					</div>
+					
 				</div>
 			</article>
+			
+
 
 		<!-- Work -->
-		<article id="work" class="wrapper style2">
+		<article id="work" class="wrapper style1">
 			<div class="container">
 				<header>
 					<h2>Professional Experience and Responsibilities</h2>
 					<p>Delivered projects that improved client satisfaction and operational efficiency.</p>
 				</header>
-				<div class="job-container">
-					<!-- CSU Long Beach Section -->
-					<section class="box style1" style="margin-bottom: 20px; display: flex; align-items: flex-start;">
+				<div class="slideshow-container">
+
+					<div class="mySlides fade">
+					  <div class="numbertext">1 / 3</div>
+					  <!-- <img src="img_nature_wide.jpg" style="width:100%"> -->
+					  <!-- CSU Long Beach Section -->
+					<section class="box style1" style="margin-bottom: 20px; display: flex; align-items: flex-start;width:100%">
 						<div style="flex: 0 0 30%; padding-right: 20px;">
 							<img src="images/csulb-logo.png" alt="CSU Long Beach Logo" class="company-logo" style="max-width: 100%;">
-							<h3><a href="https://www.csulb.edu">CSU Long Beach</a></h3>
-							<h5>Graduate Student Researcher</h5>
-							<h6>February 2024 - Present</h6>
+							<h3><a href="https://www.csulb.edu">CSULB</a></h3>
+							<h5>Software Engineering/AI - Graduate Research Assistant</h5>
+							<h6>February 2024 - December 2024</h6>
 						</div>
 						<div style="flex: 0 0 70%;">
 							<ul>
-								<li>Leading end-to-end development of LLMs for software engineering applications, focusing on enhancing software requirement documents through ambiguity detection and quality improvement.</li>
+								<li>Conducted MS thesis research on leveraging LLMs for ambiguity detection and resolution in software requirements, and developed a project management tool to identify and refine ambiguous statements in requirement documents.</li>
 								<li>Implemented scalable data loaders for text and multimodal data, preprocessing and structuring software documentation with a custom NLP pipeline using SpaCy and NLTK, achieving 95% accuracy in identifying key requirements.</li>
 								<li>Developed LLM-based products for software requirement analysis, including fine-tuning models to detect unclear specifications, vague requirements, conflicting statements, and incomplete information.</li>
-								<li>Designed and modified LLM architectures for optimal performance in software-specific tasks, applying Low-Rank Adaptation (LoRA) technique to fine-tune base LLM models, resulting in a 30% reduction in training time.</li>
-								<li>Implement to Knowledge graph to find the ambiguous relation in SRS Document.</li>
+								<li>Designed and modified LLM architectures for optimal performance in software-specific tasks, applying Low-Rank Adaptation (LoRA) technique to fine-tune base LLM models, resulting in a 30% reduction in training time and implemented Knowledge graph to find the ambiguous relation in SRS Document.</li>
+								<li>Developed a Next.js application to automate professional bulk email communication for conference and workshop attendees, featuring dynamic email templates, recipient management, and event-specific customization to enhance attendee engagement and streamline event coordination.</li>
 							</ul>
 						</div>
 					</section>
-		
-					<!-- NTT Data Section -->
-					<section class="box style1" style="margin-bottom: 20px; display: flex; align-items: flex-start;">
+					</div>
+					
+					<div class="mySlides fade">
+					  <div class="numbertext">2 / 3</div>
+					  <!-- <img src="img_snow_wide.jpg" style="width:100%"> -->
+					  <!-- NTT Data Section -->
+					<section class="box style1" style="margin-bottom: 20px; display: flex; align-items: flex-start;width:100%">
 						<div style="flex: 0 0 30%; padding-right: 20px;">
 							<img src="images/ntt-data-logo.jpeg" alt="NTT Data Logo" class="company-logo" style="max-width: 100%;">
-							<h3><a href="https://us.nttdata.com/en">NTT Data</a></h3>
+							<h3><a href="https://us.nttdata.com/en">NTT Data North America</a></h3>
 							<h5>Senior Software Engineer</h5>
-							<h6>December 2021 - December 2022</h6>
+							<h6>Dec 2021 - Dec 2022</h6>
 						</div>
 						<div style="flex: 0 0 70%;">
 							<ul>
-								<li>Utilized RAML to define and create comprehensive API specifications, ensuring standardized, well-documented and consistent API design.</li>
-								<li>Developed 50+ RESTful APIs using Mulesoft platform components including API Manager, AnyPoint Studio, Dataweave and leveraging CI/CD pipelines for hosting on the MuleSoft cloudHub.</li>
-								<li>Developed 10+ integration apps using DataWeave for seamless data mapping between systems via consumption of RESTful API endpoints. Configured APIs security, API portals, and API analytics using MuleSoft API Manager.</li>
-								<li>Implemented robust security features, such as OAuth authorization and basic authentication (client ID and client secret), to secure APIs and integrated Twilio to enable SMS notifications as part of API-driven solutions, providing an additional communication channel for stakeholders.</li>
+								<li>Collaborated with cross-functional teams to define and create comprehensive API specifications using RAML, ensuring
+									standardized, well-documented, and consistent API design.</li>
+								<li>Developed 50+ RESTful APIs using Mulesoft platform components including API Manager, AnyPoint Studio, Dataweave
+									and leveraging CI/CD pipelines for hosting on the MuleSoft cloudHub.</li>
+								<li>Developed 10+ integration apps using DataWeave for seamless data mapping between systems via consumption of
+									RESTful API endpoints. Configured APIs security, API portals, and API analytics using MuleSoft API Manager.</li>
+								<li>Implemented robust security features, such as OAuth authorization and basic authentication (client ID and client
+secret), to secure APIs and integrated Twilio to enable SMS notifications as part of API-driven solutions, providing an
+additional communication channel for stakeholders.</li>
 							</ul>
 						</div>
 					</section>
-		
-					<!-- Capgemini India Section -->
-					<section class="box style1" style="margin-bottom: 20px; display: flex; align-items: flex-start;">
+					  
+					</div>
+					
+					<div class="mySlides fade">
+					  <div class="numbertext">3 / 3</div>
+					  <!-- <img src="img_mountains_wide.jpg" style="width:100%"> -->
+					  <!-- Capgemini India Section -->
+					<section class="box style1" style="margin-bottom: 20px; display: flex; align-items: flex-start;width:100%">
 						<div style="flex: 0 0 30%; padding-right: 20px;">
 							<img src="images/capgemini-logo.jpeg" alt="Capgemini India Logo" class="company-logo" style="max-width: 100%;">
 							<h3><a href="https://www.capgemini.com/in-en/">Capgemini India</a></h3>
@@ -154,66 +423,56 @@
 							<ul>
 								<li>Automation Testing: Automated testing of a Commercial Banking application using Behaviour Driven Development Framework, reducing manual effort by 80% and improving system functionality.</li>
 								<li>Java Utility: Enhanced performance and streamline operations of application by developing java utility using Object-Oriented design that could connect and retrieve customers records from MongoDB and Mainframe for validation and verification with on screen information of client E-commercial banking site and cut down manual tasks by 40%.</li>
-								<li>Impact: Created java utility to store, manage and use test data from Excel sheet which improved overall performance of the Automation Testing application improving system reliability by 50%.</li>
+								<li> Optimized database schemas and queries, enhancing overall performance of automation testing frameworks by 50% and
+									partnered with cross-functional teams to deliver software enhancements and maintain project deadlines.</li>
 							</ul>
 						</div>
 					</section>
-				</div>
-			</div>
-		</article>
-			<!-- <article id="work" class="wrapper style2">
-				<div class="container">
-					<header>
-						<h2>Professional Experience and Responsibilities</h2>
-						<p>Delivered projects that improved client satisfaction and operational efficiency.</p>
-					</header>
-					<div class="row aln-center">
-						<div class="col-4 col-6-medium col-12-small">
-							<section class="box style1" style="height: 1000px; overflow-y: auto;">
-								
-								<img src="images/csulb-logo.png" alt="NTT Data Logo" class="company-logo">
-								<h3><a href="https://www.csulb.edu">CSU Long Beach</a></h3>
-								<h5>Graduate Student Researcher</h5>
-								<h9>February 2024 - Present</h9>
-								<p><ul>
-									<li>Leading end-to-end development of LLMs for software engineering applications, focusing on enhancing software requirement documents through ambiguity detection and quality improvement.</li>
-									
-									<li>Implemented scalable data loaders for text and multimodal data, preprocessing and structuring software documentation with a custom NLP pipeline using SpaCy and NLTK, achieving 95% accuracy in identifying key requirements.</li>
-									
-									<li>Developed LLM-based products for software requirement analysis, including fine-tuning models to detect unclear specifications, vague requirements, conflicting statements, and incomplete information.</li>
-									
-									<li>Designed and modified LLM architectures for optimal performance in software-specific tasks, applying Low-Rank Adaptation (LoRA) technique to fine-tune base LLM models, resulting in a 30% reduction in training time.</li>
-								    <li>Implement to Knowledge graph to find the ambiguous relation in SRS Document.</li>
-								</ul></p>
-							</section>
-						</div>
-						<div class="col-4 col-6-medium col-12-small">
-							<section class="box style1" style="height: 1000px; overflow-y: auto;">
-								<img src="images/ntt-data-logo.jpeg" alt="NTT Data Logo" class="company-logo">
-								<h3><a href="https://us.nttdata.com/en">NTT Data</a></h3>
-								<h5>Senior Software Engineer</h5>
-								<h9>December 2021 - December 2022</h9>
-								<p><ul><li> Utilized RAML to define and create comprehensive API specifications, ensuring standardized, well-documented and consistent API design.</li>
-									<li>Developed 50+ RESTful APIs using Mulesoft platform components including API Manager, AnyPoint Studio, Dataweave and leveraging CI/CD pipelines for hosting on the MuleSoft cloudHub.
-									<li> Developed 10+ integration apps using DataWeave for seamless data mapping between systems via consumption of RESTful API endpoints. Configured APIs security , API portals, and API analytics using MuleSoft API Manager.</li>
-									<li> Implemented robust security features, such as OAuth authorization and basic authentication (client ID and client secret), to secure APIs and integrated Twilio to enable SMS notifications as part of API-driven solutions, providing an additional communication channel for stakeholders.</li></ul></p>
-							</section>
-						</div>
-						<div class="col-4 col-6-medium col-12-small">
-							<section class="box style1" style="height: 1000px; overflow-y: auto;">
-								<img src="images/capgemini-logo.jpeg" alt="Capgemini India Logo" class="company-logo">
-								<h3><a href="https://www.capgemini.com/in-en/">Capgemini India</a></h3>
-								<h5>Associate Consultant</h5>
-								<h9>February 2019 - December 2021</h9>
-								<p><ul><li>Automation Testing: Automated testing of a Commercial Banking application using Behaviour Driven Development Framework, reducing manual effort by 80% and improving system functionality.</li>
-									<li> Java Utility: Enhanced performance and streamline operations of application by developing java utility using Object- Oriented design that could connect and retrieve customers records from MongoDB and Mainframe for validation and verification with on screen information of client E-commercial banking site and cut down manual tasks by 40%.</li>
-									<li>Impact: Created java utility to store, manage and use test data from Excel sheet which improved overall performance of the Automation Testing application improving system reliability by 50%.</li></ul></p>
-							</section>
-						</div>
+					  
 					</div>
 					
-				</div>
-			</article> -->
+					<a class="prev" onclick="plusSlides(-1)">❮</a>
+					<a class="next" onclick="plusSlides(1)">❯</a>
+					
+					</div>
+					<br>
+					
+					<div style="text-align:center">
+					  <span class="dot" onclick="currentSlide(1)"></span> 
+					  <span class="dot" onclick="currentSlide(2)"></span> 
+					  <span class="dot" onclick="currentSlide(3)"></span> 
+					</div>
+					
+					<script>
+					let slideIndex = 1;
+					showSlides(slideIndex);
+					
+					function plusSlides(n) {
+					  showSlides(slideIndex += n);
+					}
+					
+					function currentSlide(n) {
+					  showSlides(slideIndex = n);
+					}
+					
+					function showSlides(n) {
+					  let i;
+					  let slides = document.getElementsByClassName("mySlides");
+					  let dots = document.getElementsByClassName("dot");
+					  if (n > slides.length) {slideIndex = 1}    
+					  if (n < 1) {slideIndex = slides.length}
+					  for (i = 0; i < slides.length; i++) {
+						slides[i].style.display = "none";  
+					  }
+					  for (i = 0; i < dots.length; i++) {
+						dots[i].className = dots[i].className.replace(" active", "");
+					  }
+					  slides[slideIndex-1].style.display = "block";  
+					  dots[slideIndex-1].className += " active";
+					}
+					</script>
+			</div>
+		</article>
 
 		<!-- Portfolio -->
 			<article id="portfolio" class="wrapper style3">
@@ -289,15 +548,16 @@
 					 <div>
 						<h3>Awards</h3>
 						<ul>
-							<li><p>Star Performance Award, August 2022 : I was selected for this esteem award for delivering high quality solutions using Mulesoft technology at NTT Data(Apisero).</p></li>
+							<li><p>Star Performance Award, August 2022 : I was selected for this esteem award for delivering high quality solutions using Mulesoft technology at NTT Data North America(Apisero).</p></li>
 							<li><p>Apihana Certificate of Achievement : I was acknowledged for professionalism and willingness to go above and beyond
-								to support team members at NTT Data(Apisero).</p></li>
+								to support team members at NTT Data North America(Apisero).</p></li>
 						</ul>
 					
 
 						<h3>Publications</h3>
 						<ul>
-							<li><p>My paper - <a href="https://drive.google.com/file/d/1A8H9mbnxpqBAFFx5R7BmtX3W1xpc-jqb/view?usp=sharing">"Enhancing Software Requirements Quality:Ambiguity Detection and Resolution Using Large Language Models"</a> was selected in The 22nd International Conference on Software Engineering Research & Practice (SERP'24)</p></li>
+							<li><p>My paper - <a href="https://drive.google.com/file/d/1A8H9mbnxpqBAFFx5R7BmtX3W1xpc-jqb/view?usp=sharing">"Enhancing Software Requirements Quality:Ambiguity Detection and Resolution Using Large Language Models"</a> was published in The 2024 International Conference on Computational
+								Science and Computational Intelligence (CSCI'24)</p></li>
 						</ul>
 						
 					 </div>
