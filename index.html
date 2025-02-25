@@ -1,832 +1,402 @@
-<!DOCTYPE HTML>
-<!--
-	Miniport by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
-		<title>Ankit Raj Portfolio</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-      
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ankit Raj - Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    animation: {
+                        'infinite-scroll': 'infinite-scroll 25s linear infinite',
+                    },
+                    keyframes: {
+                        'infinite-scroll': {
+                            from: { transform: 'translateX(0)' },
+                            to: { transform: 'translateX(-100%)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-white">
+    <!-- Navigation -->
+    <nav class="sticky top-0 z-50 bg-white/80 dark:bg-gray-900/80 backdrop-blur-md border-b border-gray-200 dark:border-gray-700">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center space-x-8">
+                    <a href="#home" class="text-xl font-bold">Ankit Raj</a>
+                    <div class="hidden md:flex space-x-6">
+                        <a href="#about" class="hover:text-blue-600 dark:hover:text-blue-400">About</a>
+                        <a href="#experience" class="hover:text-blue-600 dark:hover:text-blue-400">Experience</a>
+                        <a href="#projects" class="hover:text-blue-600 dark:hover:text-blue-400">Projects</a>
+                        <a href="#contact" class="hover:text-blue-600 dark:hover:text-blue-400">Contact</a>
+                    </div>
+                </div>
+                <button id="theme-toggle" class="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700">
+                    <i class="fas fa-moon dark:hidden"></i>
+                    <i class="fas fa-sun hidden dark:block"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
 
-		<style>
-              #name {
-      font-family: 'Arial', sans-serif;
-      font-size: 1.8em;
-      margin-bottom: 10px;
-      color: #110f0f;
-      text-align: auto;
-      opacity: 0;
-      animation: fadeIn 2s forwards, scaleIn 1s ease-out 1.5s forwards;
-    }
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen flex items-center">
+        <div class="container mx-auto px-4 py-16">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="relative">
+                    <div class="w-64 h-64 md:w-80 md:h-80 mx-auto rounded-full overflow-hidden border-4 border-blue-600 dark:border-blue-400">
+                        <img src="images/selfie.jpeg" alt="Profile" class="w-full h-full object-cover">
+                    </div>
+                </div>
+                <div class="space-y-6">
+                    <div class="inline-block px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-full text-sm">
+                        Available for opportunities
+                    </div>
+                    <h1 class="text-4xl md:text-6xl font-bold">
+                        Hello, I'm <span class="text-blue-600 dark:text-blue-400">Ankit Raj</span>
+                    </h1>
+                    <p class="text-lg text-gray-600 dark:text-gray-300">
+                        Software Engineer with over 5 years of industrial experience in designing and delivering scalable, high-performance solutions. I’ve worked on projects that span API development, AI research, and Full-stack applications. I really enjoy diving into complex challenges and driven by the opportunity to create solutions that make a real impact.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#contact" class="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg">
+                            Contact Me
+                        </a>
+                        <a href="#projects" class="px-6 py-3 border border-gray-300 dark:border-gray-700 hover:border-blue-600 dark:hover:border-blue-400 rounded-lg">
+                            View Projects
+                        </a>
+                    </div>
+                </div>
+               
+            </div>
+        </div>
+    </section>
 
-    #name strong {
-      color: #5e5959;
-      animation: nameAnimation 3s ease-out forwards, colorChange 4s infinite alternate;
-    }
+    <!-- Experience Section -->
+    <section id="experience" class="py-20 bg-white dark:bg-gray-800">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">Professional Experience</h2>
+            <div class="max-w-4xl mx-auto space-y-8">
+                <!-- CSULB -->
+                <div class="bg-gray-50 dark:bg-gray-900 rounded-lg p-6 shadow-lg transform transition hover:-translate-y-1">
+                    <div class="flex flex-col md:flex-row gap-6">
+                        <div class="md:w-1/4">
+                            <img src="images/csulb-logo.png" alt="CSULB" class="w-32 h-auto">
+                            <h3 class="text-xl font-bold mt-4">CSULB</h3>
+                            <p class="text-sm text-gray-600 dark:text-gray-400">Feb 2024 - Dec 2024</p>
+                        </div>
+                        <div class="md:w-3/4">
+                            <h4 class="text-lg font-semibold mb-2">Software Engineering/AI - Graduate Research Assistant</h4>
+                            <ul class="list-disc list-inside space-y-2 text-gray-600 dark:text-gray-300">
+                                <li>Conducted MS thesis research on leveraging LLMs for ambiguity detection</li>
+                                <li>Implemented scalable data loaders achieving 95% accuracy</li>
+                                <li>Developed LLM-based products for software requirement analysis</li>
+                                <li>Implemented automated data and model versioning</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
 
-    /* Animation for fading in the entire text */
-    @keyframes fadeIn {
-      0% {
-        opacity: 0;
-        transform: translateY(20px);
-      }
-      100% {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
+                <!-- NTT Data -->
+                <div class="bg-gray-50 dark:bg-gray-900 rounded-lg p-6 shadow-lg transform transition hover:-translate-y-1">
+                    <div class="flex flex-col md:flex-row gap-6">
+                        <div class="md:w-1/4">
+                            <img src="images/ntt-data-logo.jpeg" alt="NTT Data" class="w-32 h-auto">
+                            <h3 class="text-xl font-bold mt-4">NTT Data</h3>
+                            <p class="text-sm text-gray-600 dark:text-gray-400">Dec 2021 - Dec 2022</p>
+                        </div>
+                        <div class="md:w-3/4">
+                            <h4 class="text-lg font-semibold mb-2">Senior Software Engineer</h4>
+                            <ul class="list-disc list-inside space-y-2 text-gray-600 dark:text-gray-300">
+                                <li>Designed and deployed 20+ RESTful APIs</li>
+                                <li>Engineered 10+ integration applications</li>
+                                <li>Implemented auto-scaling solutions</li>
+                                <li>Enhanced API security measures</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
 
-    /* Animation for scaling up the entire text */
-    @keyframes scaleIn {
-      0% {
-        transform: scale(0.5);
-      }
-      100% {
-        transform: scale(1);
-      }
-    }
+                <div class="bg-gray-50 dark:bg-gray-900 rounded-lg p-6 shadow-lg transform transition hover:-translate-y-1">
+                    <div class="flex flex-col md:flex-row gap-6">
+                        <div class="md:w-1/4">
+                            <img src="images/capgemini-logo.jpeg" alt="Capgemini" class="w-32 h-auto">
+                            <h3 class="text-xl font-bold mt-4">Capgemini</h3>
+                            <p class="text-sm text-gray-600 dark:text-gray-400">Feb 2019 - Dec 2021</p>
+                        </div>
+                        <div class="md:w-3/4">
+                            <h4 class="text-lg font-semibold mb-2">Senior Software Engineer</h4>
+                            <ul class="list-disc list-inside space-y-2 text-gray-600 dark:text-gray-300">
+                                <li>Architected and maintained scalable web applications with 50+ modules, enhancing performance, user experience, and maintainability.</li>
+                                <li>Optimized database schemas and queries, reduce database load time.</li>
+                                <li>Developed Java utilities to retrieve customer payment records from database and mainframe.</li>
+                                <li>Automated regression testing for a Commercial Banking application using selenium Cucumber.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    /* Animation for the name appearing with a side-to-side motion */
-    @keyframes nameAnimation {
-      0% {
-        opacity: 0;
-        transform: translateX(-20px);
-      }
-      50% {
-        opacity: 0.5;
-        transform: translateX(10px);
-      }
-      100% {
-        opacity: 1;
-        transform: translateX(0);
-      }
-    }
+    <!-- Skills Section -->
+    <section class="py-20">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">Skills & Technologies</h2>
+            <div class="relative overflow-hidden">
+                <div class="flex animate-infinite-scroll space-x-8">
+                    <!-- First row of tech skills -->
+<div class="flex space-x-8">
+    <div class="skill-card"><i class="fab fa-react"></i> React</div>
+    <div class="skill-card"><i class="fab fa-node-js"></i> Node.js</div>
+    <div class="skill-card"><i class="fab fa-python"></i> Python</div>
+    <div class="skill-card"><i class="fab fa-aws"></i> AWS</div>
+    <div class="skill-card"><i class="fab fa-docker"></i> Docker</div>
+    <div class="skill-card"><i class="fas fa-code-branch"></i> GraphQL</div>
+    <div class="skill-card"><i class="fas fa-database"></i> MongoDB</div>
+    <div class="skill-card"><i class="fab fa-server"></i> Next.js</div>
+    <div class="skill-card"><i class="fab fa-python"></i> TensorFlow</div>
+    <div class="skill-card"><i class="fas fa-fire"></i> PyTorch</div>
+  </div>
+  
+  <!-- Duplicate for seamless scrolling -->
+  <div class="flex space-x-8">
+    <div class="skill-card"><i class="fas fa-robot"></i> LLM</div>
+    <div class="skill-card"><i class="fas fa-network-wired"></i> Kafka</div>
+    <div class="skill-card"><i class="fab fa-external-link-alt"></i> Kubernetes</div>
+    <div class="skill-card"><i class="fab fa-google"></i> GCP</div>
+    <div class="skill-card"><i class="fas fa-bug"></i> Selenium</div>
+    <div class="skill-card"><i class="fas fa-rocket"></i> FastAPI</div>
+    <div class="skill-card"><i class="fab fa-python"></i> Django</div>
+    <div class="skill-card"><i class="fas fa-cogs"></i> MLops</div>
+    <div class="skill-card"><i class="fas fa-chart-bar"></i> Tableau</div>
+    <div class="skill-card"><i class="fas fa-database"></i> SQL</div>
+    <div class="skill-card"><i class="fab fa-node-js"></i>ExpressJS</div>
+    <div class="skill-card"><i class="fas fa-robot"></i>Firebase</div>
+  <div class="skill">
+    <i class="fas fa-language"></i>
+    <span>Spacy</span>
+</div>
+<div class="skill">
+    <i class="fas fa-comment-alt"></i>
+    <span>NLTK</span>
+</div>
+<div class="skill">
+    <i class="fas fa-network-wired"></i>
+    <span>RAG</span>
+</div>
+<div class="skill">
+    <i class="fas fa-layer-group"></i>
+    <span>Keras</span>
+</div>
+<div class="skill">
+    <i class="fas fa-project-diagram"></i>
+    <span>Knowledge Graph</span>
+</div>
+<div class="skill">
+    <i class="fas fa-cogs"></i>
+    <span>Scikit-learn</span>
+</div>
+<div class="skill">
+    <i class="fas fa-server"></i>
+    <span>Web Services</span>
+</div>
+<div class="skill">
+    <i class="fas fa-network-wired"></i>
+    <span>MuleSoft</span>
+</div>
+  
+                </div>
+            </div>
+        </div>
+    </section>
 
-    /* Smooth color transition for the name */
-    @keyframes colorChange {
-      0% {
-        color: #9fa3c2;
-      }
-      100% {
-        color: #120909;
-      }
-    }       
-			article#top.wrapper.style1 {
-position: relative;
-width: 100%;
-height: 100vh;
-display: flex;
-justify-content: center;
-align-items: center;
-color: rgb(146, 135, 135);
-background: linear-gradient(45deg, #797777, #120f0f);
-animation: backgroundAnimation 10s infinite alternate;
-}	
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 bg-white dark:bg-gray-800">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">Featured Projects</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project Card 1 -->
+                <div class="bg-gray-50 dark:bg-gray-900 rounded-lg overflow-hidden shadow-lg transform transition duration-300 hover:-translate-y-2">
+                    <img src="images/evabank.png" alt="Eva Bank" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Eva Bank</h3>
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">
+                            A static website for Eva Bank using HTML, CSS, Bootstrap and JavaScript with local storage functionality.
+                        </p>
+                        <div class="flex space-x-4">
+                            <a href="https://ankitraj999.github.io/evabank/" target="_blank" class="text-blue-600 dark:text-blue-400 hover:underline">
+                                <i class="fas fa-external-link-alt mr-2"></i>Live Demo
+                            </a>
+                            <a href="https://github.com/ankitraj999/evabank" target="_blank" class="text-blue-600 dark:text-blue-400 hover:underline">
+                                <i class="fab fa-github mr-2"></i>GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
 
-.wrapper {
-  background-color: #f0f0f0;
-  padding: 20px;
-  border-radius: 8px;
-}
+                <!-- Project Card 2 -->
+                <div class="bg-gray-50 dark:bg-gray-900 rounded-lg overflow-hidden shadow-lg transform transition duration-300 hover:-translate-y-2">
+                    <img src="images/verilink.png" alt="VeriLink" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">VeriLink</h3>
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">
+                            A secure authentication solution using React.js and Node.js for event organization websites.
+                        </p>
+                        <div class="flex space-x-4">
+                        
+                            <a href="#" target="_blank" class="text-blue-600 dark:text-blue-400 hover:underline">
+                                <i class="fab fa-github mr-2"></i>GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
 
+                <!-- Project Card 3 -->
+                <div class="bg-gray-50 dark:bg-gray-900 rounded-lg overflow-hidden shadow-lg transform transition duration-300 hover:-translate-y-2">
+                    <img src="images/surveillance.png" alt="Surveillance LLM" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Surveillance LLM</h3>
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">
+                            Integration of BLIP and ChatGPT for intelligent surveillance and security threat detection.
+                        </p>
+                        <div class="flex space-x-4">
+                            <a href="https://github.com/ankitraj999/surveillance-LLM" target="_blank" class="text-blue-600 dark:text-blue-400 hover:underline">
+                                <i class="fab fa-github mr-2"></i>GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project Card 4 -->
+                <div class="bg-gray-50 dark:bg-gray-900 rounded-lg overflow-hidden shadow-lg transform transition duration-300 hover:-translate-y-2">
+                    <img src="images/project.png" alt="Project Management" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">ClearMind AI Project Management</h3>
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">
+                            Web app to enhance software requriement documents quality using LLMs by detecting and resolving ambiguity.
+                        </p>
+                        <div class="flex space-x-4">
+                            
+                            <a href="https://www.youtube.com/watch?v=2h3vkjeMEQ8" target="_blank" class="text-blue-600 dark:text-blue-400 hover:underline">
+                                <i class="fas fa-external-link-alt mr-2"></i>Live Demo
+                            </a>
+                            
+                        </div>
+                    </div>
+                </div>
+                <!-- Project Card 5 -->
+                <div class="bg-gray-50 dark:bg-gray-900 rounded-lg overflow-hidden shadow-lg transform transition duration-300 hover:-translate-y-2">
+                    <img src="images/pantry.png" alt="Pantry Tracker" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">AI-powered Pantry Inventory Management and Recipe recommender
+                        </h3>
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">
+                            Integrated Gemini Model and used Llama for product information retrieval and recipe suggestion in web app.
+                        </p>
+                        <div class="flex space-x-4">
+                            <a href="https://www.youtube.com/watch?v=orSUGsIBcwQ" target="_blank" class="text-blue-600 dark:text-blue-400 hover:underline">
+                                <i class="fas fa-external-link-alt mr-2"></i>Live Demo
+                            </a>
 
+                            <a href="https://github.com/ankitraj999/pantry-tracker" target="_blank" class="text-blue-600 dark:text-blue-400 hover:underline">
+                                <i class="fab fa-github mr-2"></i>GitHub
+                            </a>
+                           
+                        </div>
+                    </div>
+                </div>
+                <!-- Project Card 6 -->
+                <div class="bg-gray-50 dark:bg-gray-900 rounded-lg overflow-hidden shadow-lg transform transition duration-300 hover:-translate-y-2">
+                    <img src="images/fcard.png" alt="Surveillance LLM" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Smart Flash Card Generator using RAG</h3>
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">
+                            Web app using RAG and pinecone to create flash card from academic books to help student memorise their subject.
+                        </p>
+                        <div class="flex space-x-4">
+                            <a href="https://github.com/ankitraj999/Flask-FlashCard-Server-RAG" target="_blank" class="text-blue-600 dark:text-blue-400 hover:underline">
+                                <i class="fab fa-github mr-2"></i>GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-			   /* Card Animation */
-.container1 {
-	   margin: 10px auto;
-	   background-color: #4f4d4d; /* Grey background */
-	   padding: 40px;
-	   border-radius: 20px;
-	   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-   }           
-			   .card {
-				   border-radius: 15px;
-				   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-				   overflow: hidden;
-				   background-color: #fff;
-				   margin: 20px;
-				   padding: 20px;
-				   transition: transform 0.3s ease, box-shadow 0.3s ease;
-			   }
-		   
-			   .card:hover {
-				   transform: translateY(-10px);
-				   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
-			   }
-		   
-			   /* Image Animation */
-			   .card .image img {
-				   max-width: 100%;
-				   height: auto;
-				   border-radius: 10px;
-				   transition: transform 0.3s ease;
-			   }
-		   
-			   .card:hover .image img {
-				   transform: scale(1.05);
-			   }
-		   
-			   /* Text Fade-in Animation */
-			   .card .text-content {
-				   opacity: 0;
-				   transform: translateY(20px);
-				   animation: fadeInUp 1s forwards;
-			   }
-		   
-			   .card:hover .text-content {
-				   animation: fadeInUp 1s forwards;
-			   }
-		   
-			   /* Fade-in Effect */
-			   @keyframes fadeInUp {
-				   from {
-					   opacity: 0;
-					   transform: translateY(20px);
-				   }
-				   to {
-					   opacity: 1;
-					   transform: translateY(0);
-				   }
-			   }
-		   
-			   /* Hover effect on the link */
-			   a {
-				   color: #007bff;
-				   text-decoration: none;
-				   transition: color 0.3s ease;
-			   }
-		   
-			   a:hover {
-				   color: #0056b3;
-			   }
-			   * {box-sizing: border-box}
-body {font-family: Verdana, sans-serif; margin:0}
-.mySlides {display: none}
-img {vertical-align: middle;}
+    <!-- Contact Section -->
+    <section id="contact" class="py-20">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">Get In Touch</h2>
+            <div class="max-w-lg mx-auto text-center">
+                <p class="text-gray-600 dark:text-gray-300 mb-8">
+                    Feel free to reach out for collaborations or just a friendly hello
+                </p>
+                <div class="flex justify-center space-x-6">
+                    <a href="https://github.com/ankitraj999" target="_blank" class="text-2xl hover:text-blue-600 dark:hover:text-blue-400">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/ankitzraj/" target="_blank" class="text-2xl hover:text-blue-600 dark:hover:text-blue-400">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="mailto:your.email@example.com" class="text-2xl hover:text-blue-600 dark:hover:text-blue-400">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                    <a href="https://www.instagram.com/ankit.the.raj/" target="_blank" class="text-2xl hover:text-blue-600 dark:hover:text-blue-400">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
 
-/* Slideshow container */
-.slideshow-container {
-  max-width: auto;
-  position: relative;
-  margin: auto;
-}
+    <!-- Footer -->
+    <footer class="py-6 bg-gray-100 dark:bg-gray-800">
+        <div class="container mx-auto px-4 text-center text-gray-600 dark:text-gray-400">
+            <p>&copy; 2024 Ankit Raj. All rights reserved.</p>
+        </div>
+    </footer>
 
-/* Next & previous buttons */
-.prev {
-  cursor: pointer;
-  position: relative;
-  top: 50%;
-  width: auto;
-  padding: 16px;
-  margin-top: -22px;
-  color: rgb(22, 19, 19);
-  font-weight: bold;
-  font-size: 18px;
-  transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
-}
-.next {
-  cursor: pointer;
-  position: relative;
-  top: 50%;
-  width: auto;
-  padding: 16px;
-  margin-top: -22px;
-  color: rgb(22, 19, 19);
-  font-weight: bold;
-  font-size: 18px;
-  transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
-  right: 0;
-}
+    <style>
+        .skill-card {
+            @apply px-6 py-3 bg-gray-100 dark:bg-gray-800 rounded-lg shadow-sm whitespace-nowrap;
+        }
+    </style>
 
+    <script>
+        // Theme Toggle
+        const themeToggle = document.getElementById('theme-toggle');
+        
+        // Check for saved theme preference or default to system preference
+        if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark');
+        } else {
+            document.documentElement.classList.remove('dark');
+        }
 
-/* On hover, add a black background color with a little bit see-through */
-.prev:hover, .next:hover {
-  background-color: rgba(0,0,0,0.8);
-}
+        // Toggle theme
+        themeToggle.addEventListener('click', () => {
+            document.documentElement.classList.toggle('dark');
+            localStorage.theme = document.documentElement.classList.contains('dark') ? 'dark' : 'light';
+        });
 
-/* Caption text */
-.text {
-  color: #272424;
-  font-size: 15px;
-  padding: 8px 12px;
-  position: absolute;
-  bottom: 8px;
-  width: 100%;
-  text-align: center;
-}
-
-/* Number text (1/3 etc) */
-.numbertext {
-  color: #322c2c;
-  font-size: 15px;
-  padding: 8px 12px;
-  position: absolute;
-  top: 0;
-}
-
-/* The dots/bullets/indicators */
-.dot {
-  cursor: pointer;
-  height: 15px;
-  width: 15px;
-  margin: 0 2px;
-  background-color: #1a1818;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.6s ease;
-}
-
-.active, .dot:hover {
-  background-color: #717171;
-}
-
-/* Fading animation */
-.fade {
-  animation-name: fade;
-  animation-duration: 1.5s;
-}
-
-@keyframes fade {
-  from {opacity: .4} 
-  to {opacity: 1}
-}
-
-/* On smaller screens, decrease text size */
-@media only screen and (max-width: 300px) {
-  .prev, .next,.text {font-size: 11px}
-}
-	</style>
-	</head>
-	<body class="is-preload">
-
-
-		<!-- Nav -->
-			<nav id="nav">
-				<ul class="container">
-					<li><a href="#top">Intro</a></li>
-					<li><a href="#work">Work Experience</a></li>
-					<li><a href="#portfolio">Projects</a></li>
-					<li><a href="#contact">Awards and Publications</a></li>
-					<li><a href="#contact">Contact</a></li>
-					<li><a href="https://github.com/ankitraj999" target="_blank">Github</a></li>
-					<li><a href="https://www.linkedin.com/in/ankitzraj/" target="_blank">LinkedIn</a></li>
-				</ul>
-			</nav>
-
-		<!-- Home -->
-		
-		  
-		  <script>
-			function scrollText() {
-			  var element = document.getElementById('scrollingText');
-			  var parent = document.getElementById('welcomeMsg');
-			  var distance = parent.offsetWidth;
-			  var speed = 50; // Lower is faster
-		  
-			  function step() {
-				element.style.transform = `translateX(${distance}px)`;
-				distance--;
-		  
-				if (distance < -element.offsetWidth) {
-				  distance = parent.offsetWidth;
-				}
-		  
-				requestAnimationFrame(step);
-			  }
-		  
-			  step();
-			}
-		  
-			window.onload = scrollText;
-		  </script>
-		 
-		  	<div id="welcomeMsg" class="text-info font-italic" style="overflow: hidden; width: 100%;">
-				<h4 id="scrollingText" style="white-space: nowrap; display: inline-block;">
-				  &nbsp; &nbsp; Actively looking for full time software Engineering position !! &nbsp; &nbsp;
-				</h4>
-			  </div>
-		
-			  <article id="top" class="wrapper style1">
-				<div class="container1">
-					
-					
-					<div class="card">
-						<div class="row">
-							<div class="col-4 col-5-large col-12-medium" style="display: flex; align-items: center; justify-content: center;">
-								<div style="text-align: center;">
-									<span class="image fit" style="margin-bottom: 20px; border-radius: 10px; overflow: hidden;">
-										<img src="images/selfie.jpeg" alt="" style="border-radius: 10px;" />
-									</span>
-									<div style="text-align: center;">
-										<strong style="display: block; margin-bottom: 5px;">MSCS at CSULB (2023 - 2024)</strong>
-										
-									  </div>
-									
-								</div>
-							</div>
-							<div class="col-8 col-7-large col-12-medium text-content">
-								<header>
-									<h1 id="name">Hello, I'm <strong>Ankit Raj</strong>.</h1>
-								</header>
-								<p style="font-size: 1.1em; line-height: 1.6; color: #444;">
-									<p><strong>Software engineer</strong> with over 4 years of experience designing and <strong>delivering scalable</strong>,<strong> high-performance solutions</strong>. 
-										I hold a Master degree in Computer Science from California State University Long Beach, where I conducted cutting-edge research in advanced <strong>machine learning and leveraged large language models (LLMs) </strong>for ambiguity detection in software requirements. 
-									</p>
-									<p>My background spans <strong>Data Integration & Scalable API Development</strong>, <strong>Full-stack Web Application Architecture</strong>, <strong>Advanced ML Research & Computational Modeling</strong> and <strong>Automation Testing</strong>,</strong> complemented by hands-on expertise in Python, JavaScript, and modern frameworks like React.js, Node.js, GraphQL and FastAPI. 
-										Adept at collaborating across cross-functional teams using Agile methodologies, I excel in optimizing systems for efficiency, reliability, and user experience, and I am passionate about driving impactful results through innovative technologies.
-									</p>
-								</p>
-							</div>
-						</div>
-					</div>
-					
-				</div>
-			</article>
-			
-
-
-		<!-- Work -->
-		<article id="work" class="wrapper style1">
-			<div class="container">
-				<header>
-					<h2>Professional Experience and Responsibilities</h2>
-					<p>Delivered projects that improved client satisfaction and operational efficiency.</p>
-				</header>
-				<div class="slideshow-container">
-
-					<div class="mySlides fade">
-					  <div class="numbertext">1 / 3</div>
-					  <!-- <img src="img_nature_wide.jpg" style="width:100%"> -->
-					  <!-- CSU Long Beach Section -->
-					<section class="box style1" style="margin-bottom: 20px; display: flex; align-items: flex-start;width:100%">
-						<div style="flex: 0 0 30%; padding-right: 20px;">
-							<img src="images/csulb-logo.png" alt="CSU Long Beach Logo" class="company-logo" style="max-width: 100%;">
-							<h3><a href="https://www.csulb.edu">CSULB</a></h3>
-							<h5>Software Engineering/AI - Graduate Research Assistant</h5>
-							<h6>February 2024 - December 2024</h6>
-						</div>
-						<div style="flex: 0 0 70%;">
-							<ul>
-								<li>Conducted MS thesis research on leveraging LLMs for ambiguity detection and resolution in software requirements, and developed a project management tool to identify and refine ambiguous statements in requirement documents.</li>
-								<li>Implemented scalable data loaders for text and multimodal data, preprocessing and structuring software documentation with a custom NLP pipeline using SpaCy and NLTK, achieving 95% accuracy in identifying key requirements.</li>
-								<li>Developed LLM-based products for software requirement analysis, including fine-tuning models to detect unclear specifications, vague requirements, conflicting statements, and incomplete information.</li>
-								<li>Implemented automated data and model versioning along with real-time monitoring, ensuring reproducibility, traceability, and proactive detection of performance anomalies, model drift, and system inefficiencies through dashboards and alerts.</li>
-								<li>Designed and modified LLM architectures for optimal performance in software-specific tasks, applying Low-Rank Adaptation (LoRA) technique to fine-tune base LLM models, resulting in a 30% reduction in training time and implemented Knowledge graph to find the ambiguous relation in SRS Document.</li>
-								<li>Developed a Next.js application to automate professional bulk email communication for conference and workshop attendees, featuring dynamic email templates, recipient management, and event-specific customization to enhance attendee engagement and streamline event coordination.</li>
-							</ul>
-						</div>
-					</section>
-					</div>
-					
-					<div class="mySlides fade">
-					  <div class="numbertext">2 / 3</div>
-					  <!-- <img src="img_snow_wide.jpg" style="width:100%"> -->
-					  <!-- NTT Data Section -->
-					<section class="box style1" style="margin-bottom: 20px; display: flex; align-items: flex-start;width:100%">
-						<div style="flex: 0 0 30%; padding-right: 20px;">
-							<img src="images/ntt-data-logo.jpeg" alt="NTT Data Logo" class="company-logo" style="max-width: 100%;">
-							<h3><a href="https://us.nttdata.com/en">NTT Data North America</a></h3>
-							<h5>Senior Software Engineer</h5>
-							<h6>Dec 2021 - Dec 2022</h6>
-						</div>
-						<div style="flex: 0 0 70%;">
-							<ul>
-								<li>Collaborated with cross-functional teams to define and create comprehensive API specifications, ensuring
-									standardized, well-documented, and consistent API design.</li>
-								<li>Designed and deployed 20+ RESTful APIs, implementing scalable microservices architecture using MuleSoft,
-									reducing data processing latency by 40% by optimizing database queries & improved system efficiency.</li>
-								<li>Engineered 10+ integration applications, resulting in a 40% improvement in data processing efficiency.
-									Implemented caching strategies and connection pooling to enhance API performance and reduce database load.</li>
-								<li>Designed and implemented auto-scaling solutions for APIs, enabling dynamic resource allocation during peak loads and
-									achieving 99.9% uptime. Utilized MuleSoft’s built-in monitoring and alerting capabilities to proactively identify and
-									resolve performance bottlenecks.</li>
-								<li>Implemented comprehensive API security measures, including OAuth 2.0 authorization, mTLS, and rate limiting.
-									Configured API analytics in MuleSoft API Manager to monitor usage patterns, detect anomalies, and ensure SLA
-									compliance. Integrated Twilio for real-time SMS notifications, enhancing the overall reliability and responsiveness of
-									API-driven solutions.</li>
-							</ul>
-						</div>
-					</section>
-					  
-					</div>
-					
-					<div class="mySlides fade">
-					  <div class="numbertext">3 / 3</div>
-					  <!-- <img src="img_mountains_wide.jpg" style="width:100%"> -->
-					  <!-- Capgemini India Section -->
-					<section class="box style1" style="margin-bottom: 20px; display: flex; align-items: flex-start;width:100%">
-						<div style="flex: 0 0 30%; padding-right: 20px;">
-							<img src="images/capgemini-logo.jpeg" alt="Capgemini India Logo" class="company-logo" style="max-width: 100%;">
-							<h3><a href="https://www.capgemini.com/in-en/">Capgemini India</a></h3>
-							<h5>Associate Consultant</h5>
-							<h6>February 2019 - December 2021</h6>
-						</div>
-						<div style="flex: 0 0 70%;">
-							<ul>
-								<li>Architected and maintained scalable web applications with 50+ modules, implementing
-									optimization techniques to enhance performance, user experience, and maintainability across diverse platform.</li>
-								<li>Automated testing of a Commercial Banking application using Behaviour Driven Development Framework, reducing manual effort by 80% and improving system functionality.</li>
-								<li>Enhanced performance and streamlined operations of application by developing java utilities using object-
-									oriented programming that could connect and retrieve customer’s payment records from Database and Mainframes for validation and verification with info on e-commercial banking sites & decrease manual tasks by 40%</li>
-								<li> Optimized database schemas and queries, enhancing overall performance of automation testing frameworks by 50% and
-									partnered with cross-functional teams to deliver software enhancements and maintain project deadlines.</li>
-							</ul>
-						</div>
-					</section>
-					  
-					</div>
-					
-					<a class="prev" onclick="plusSlides(-1)">❮</a>
-					<a class="next" onclick="plusSlides(1)">❯</a>
-					
-					</div>
-					<br>
-					
-					<div style="text-align:center">
-					  <span class="dot" onclick="currentSlide(1)"></span> 
-					  <span class="dot" onclick="currentSlide(2)"></span> 
-					  <span class="dot" onclick="currentSlide(3)"></span> 
-					</div>
-					
-					<script>
-					let slideIndex = 1;
-					showSlides(slideIndex);
-					
-					function plusSlides(n) {
-					  showSlides(slideIndex += n);
-					}
-					
-					function currentSlide(n) {
-					  showSlides(slideIndex = n);
-					}
-					
-					function showSlides(n) {
-					  let i;
-					  let slides = document.getElementsByClassName("mySlides");
-					  let dots = document.getElementsByClassName("dot");
-					  if (n > slides.length) {slideIndex = 1}    
-					  if (n < 1) {slideIndex = slides.length}
-					  for (i = 0; i < slides.length; i++) {
-						slides[i].style.display = "none";  
-					  }
-					  for (i = 0; i < dots.length; i++) {
-						dots[i].className = dots[i].className.replace(" active", "");
-					  }
-					  slides[slideIndex-1].style.display = "block";  
-					  dots[slideIndex-1].className += " active";
-					}
-					</script>
-			</div>
-		</article>
-
-
-
-		<article id="skills" class="wrapper styple1">
-			<header>
-					<h2>Skills and Expertise</h2>
-				</header>
-			<div class="skills-carousel">
-				<div class="skills-container">
-					<div class="skill">
-						<i class="fab fa-google"></i>
-						<span>GCP</span>
-					</div>
-					<div class="skill">
-						<i class="fab fa-aws"></i>
-						<span>AWS</span>
-					</div>
-					<div class="skill">
-						<i class="fas fa-database"></i>
-						<span>MongoDB</span>
-					</div>
-					<div class="skill">
-						<i class="fas fa-database"></i>
-						<span>MySQL</span>
-					</div>
-					<div class="skill">
-						<i class="fas fa-chart-bar"></i>
-						<span>Tableau</span>
-					</div>
-					<div class="skill">
-						<i class="fas fa-server"></i>
-						<span>Web Services</span>
-					</div>
-					<div class="skill">
-						<i class="fas fa-network-wired"></i>
-						<span>MuleSoft</span>
-					</div>
-					<div class="skill">
-						<i class="fas fa-vial"></i>
-						<span>Selenium</span>
-					</div>
-					<div class="skill">
-						<i class="fab fa-docker"></i>
-						<span>Docker</span>
-					</div>
-					<div class="skill">
-						<i class="fas fa-cogs"></i>
-						<span>API Management</span>
-					</div>
-					<div class="skill">
-						<i class="fas fa-sync-alt"></i>
-						<span>CI/CD</span>
-					</div>
-					<div class="skill">
-						<i class="fab fa-git-alt"></i>
-						<span>GIT</span>
-					</div>
-					<div class="skill">
-						<i class="fas fa-fire"></i>
-						<span>Firebase</span>
-					</div>
-					<div class="skill">
-						<i class="fas fa-cubes"></i>
-						<span>Kubernetes</span>
-					</div>
-					<div class="skill">
-						<i class="fab fa-node-js"></i>
-						<span>NodeJS</span>
-					</div>
-					<div class="skill">
-						<i class="fab fa-node-js"></i>
-						<span>ExpressJS</span>
-					</div>
-					<div class="skill">
-						<i class="fab fa-react"></i>
-						<span>ReactJS</span>
-					</div>
-					<div class="skill">
-						<i class="fas fa-project-diagram"></i>
-						<span>GraphQL</span>
-					</div>
-					<div class="skill">
-						<i class="fab fa-react"></i>
-						<span>NextJS</span>
-					</div>
-					<div class="skill">
-						<i class="fas fa-brain"></i>
-						<span>PyTorch</span>
-					</div>
-					<div class="skill">
-						<i class="fab fa-tensorflow"></i>
-						<span>TensorFlow</span>
-					</div>
-					<div class="skill">
-						<i class="fas fa-layer-group"></i>
-						<span>Keras</span>
-					</div>
-					<div class="skill">
-						<i class="fas fa-project-diagram"></i>
-						<span>Knowledge Graph</span>
-					</div>
-					<div class="skill">
-						<i class="fas fa-cogs"></i>
-						<span>Scikit-learn</span>
-					</div>
-					<div class="skill">
-						<i class="fas fa-tools"></i>
-						<span>MLOps</span>
-					</div>
-					<div class="skill">
-						<i class="fas fa-language"></i>
-						<span>Spacy</span>
-					</div>
-					<div class="skill">
-						<i class="fas fa-comment-alt"></i>
-						<span>NLTK</span>
-					</div>
-					<div class="skill">
-						<i class="fas fa-network-wired"></i>
-						<span>RAG</span>
-					</div>
-				
-		
-					<script>
-						const carousel = document.querySelector('.skills-carousel');
-						const skillsContainer = document.querySelector('.skills-container');
-						const skills = document.querySelectorAll('.skill');
-						let currentPosition = 0;
-						let isScrolling = false;
-						let scrollDirection = 1;
-						let scrollInterval;
-				
-						function updateCarouselPosition() {
-							const skillWidth = skills[0].offsetWidth;
-							const totalWidth = skillWidth * skills.length;
-							
-							// If we've scrolled past the end, loop back to start
-							if (currentPosition >= skills.length) {
-								currentPosition = 0;
-							}
-							// If we've scrolled past the start, loop to end
-							if (currentPosition < 0) {
-								currentPosition = skills.length - 1;
-							}
-				
-							skillsContainer.style.transform = `translateX(-${currentPosition * skillWidth}px)`;
-						}
-				
-						function startScrolling() {
-							if (!isScrolling) {
-								isScrolling = true;
-								scrollInterval = setInterval(() => {
-									currentPosition += scrollDirection;
-									updateCarouselPosition();
-								}, 2000);
-							}
-						}
-				
-						function stopScrolling() {
-							isScrolling = false;
-							clearInterval(scrollInterval);
-						}
-				
-						// Track mouse position and update scroll direction
-						carousel.addEventListener('mousemove', (e) => {
-							const rect = carousel.getBoundingClientRect();
-							const mouseX = e.clientX - rect.left;
-							const carouselCenter = rect.width / 2;
-				
-							// Update scroll direction based on mouse position
-							if (mouseX < carouselCenter) {
-								scrollDirection = -1; // Scroll right to left
-							} else {
-								scrollDirection = 1;  // Scroll left to right
-							}
-				
-							// Start scrolling if not already scrolling
-							startScrolling();
-						});
-				
-						// Stop scrolling when mouse leaves the carousel
-						carousel.addEventListener('mouseleave', () => {
-							stopScrolling();
-							// Reset to default direction
-							scrollDirection = 1;
-							startScrolling();
-						});
-				
-						// Initial start
-						startScrolling();
-				
-						// Handle window resize
-						window.addEventListener('resize', updateCarouselPosition);
-					</script>
-		</article>
-
-
-		<!-- Portfolio -->
-			<article id="portfolio" class="wrapper style3">
-				<div class="container">
-					<header>
-						<h2>My Projects Overview</h2>
-						<p>I created some of the recent interesting project which added to my learning</p>
-					</header>
-					<div class="row">
-						<div class="col-4 col-6-medium col-12-small">
-							<article class="box style2" style="height: 500px; overflow-y: auto;">
-								<a href="#" class="image featured"><img src="images/evabank.png" alt="" /></a>
-								<h3><a href="https://ankitraj999.github.io/evabank/">Eva Bank</a></h3>
-								<p>This project showcases a static website for Eva Bank using HTML, CSS,Bootstrap and JavaScript. It used local and session storage to store customer data</p>
-							    <p><a href="https://github.com/ankitraj999/evabank">Github Link</a></p>
-							</article>
-						</div>
-						<div class="col-4 col-6-medium col-12-small">
-							<article class="box style2" style="height: 500px; overflow-y: auto;">
-								<a href="#" class="image featured"><img src="images/verilink.png" alt="" /></a>
-								<h3><a href="https://drive.google.com/file/d/144StebA5sn-KH6IG3Umf4YX8bX5pJ_Kh/view?usp=sharing">VeriLink</a></h3>
-								<p>A secure authentication solution I developed using React.js and Node.js. This innovative product hashes a user's professional email to generate a unique alphanumeric value, serving as a login credential for event organization websites. Verilink offers a dual benefit: it ensures privacy for users by eliminating the need to share company email addresses, while simultaneously providing event organizers with assurance of attendee authenticity. This project showcases my ability to create practical, security-focused applications that address real-world concerns in the event management industry, balancing user privacy with organizer needs.</p>
-								<p><a href="#">Github Link</a></p>
-							</article>
-						</div>
-						<div class="col-4 col-6-medium col-12-small">
-							<article class="box style2" style="height: 500px; overflow-y: auto;">
-								<a href="#" class="image featured"><img src="images/surveillance.png" alt="" /></a>
-								<h3><a href="https://docs.google.com/document/d/1-GMq9o8M_xhF8ByHh5A__SO6DeRNCemvx5oUEZb73oo/edit?usp=sharing">Surveillance LLM</a></h3>
-								<p>Surveillance LLM integrates the image description capabilities of BLIP (Bootstrapping Language-Image Pre-training for Unified Vision-Language Understanding and Generation) and the text understanding and reasoning capabilities of ChatGPT. When an image is captured by a camera, feed into the system. The system processes it and uses BLIP to describe the contents of the image. It then leverages ChatGPT to analyze the image description and detect any potential security threats and make announcement using google text to speech library.</p>
-								<p><a href="https://github.com/ankitraj999/surveillance-LLM">Github Link</a></p>
-							</article>
-						</div>
-						<div class="col-4 col-6-medium col-12-small">
-							<article class="box style2" style="height: 500px; overflow-y: auto;">
-								<a href="#" class="image featured"><img src="images/travelling.png" alt="" /></a>
-								<h3><a href="#">Smart Travelling App</a></h3>
-								<p>a traveler-focused web application built with React.js and Firebase. This platform enables users to share travel photos, chat with fellow adventurers, and connect with each other through friend requests. What sets it apart is its inclusivity—both travelers and service providers like hotel owners and activity organizers can create accounts and interact. By bridging these two groups, the app creates a unique ecosystem where travel experiences and business opportunities seamlessly blend, all powered by responsive design and real-time functionality.</p>
-								<p><a href="#">Github Link</a></p>
-							</article>
-						</div>
-						<div class="col-4 col-6-medium col-12-small">
-							<article class="box style2" style="height: 500px; overflow-y: auto;">
-								<a href="#" class="image featured"><img src="images/rag.png" alt="" /></a>
-								<h3><a href="https://www.youtube.com/watch?v=9rlxBpXdbOQ&t=195s">FinAdvisor using RAG</a></h3>
-								<p>an innovative chat application leveraging Retrieval-Augmented Generation (RAG) technology. This cutting-edge tool allows users to interact with financial books in a conversational manner, receiving personalized advice and insights. By combining natural language processing with a vast knowledge base of financial literature, the application offers an interactive and educational experience. Users can ask questions, seek clarification on complex financial concepts, and receive tailored recommendations based on the content of multiple financial books. This project demonstrates my ability to implement advanced AI technologies to create practical, user-friendly applications in the finance sector</p>
-								<p><a href="https://github.com/ankitraj999/RAG-FinAdvisor-chat-bot">Github Link</a></p>
-							</article>
-						</div>
-						<div class="col-4 col-6-medium col-12-small">
-							<article class="box style2" style="height: 500px; overflow-y: auto;">
-								<a href="#" class="image featured"><img src="images/analysis.png" alt="" /></a>
-								<h3><a href="#">Telecom Customers Analysis</a></h3>
-								<p>This project analyzes customer churn data for a telecommunications company in California, covering 7,043 customers. Using Tableau, I created interactive dashboards and a compelling story to visualize key insights</p>
-								<p><a href="https://github.com/ankitraj999/Telecom-Customers-Analysis">Github Link</a></p>
-							</article>
-						</div>
-					</div>
-					<!-- <footer>
-						<p>Lorem ipsum dolor sit sapien vestibulum ipsum primis?</p>
-						<a href="#contact" class="button large scrolly">Get in touch with me</a> 
-					</footer> -->
-				</div>
-			</article>
-
-		<!-- Contact -->
-			<article id="contact" class="wrapper style4">
-				<div class="container medium">
-					<!-- <header> -->
-						<h2>Awards and Publications</h2>
-						<!-- <p>Ornare nulla proin odio consequat sapien vestibulum ipsum.</p> -->
-					<!-- </header> -->
-					 <div>
-						<h3>Awards</h3>
-						<ul>
-							<li><p>Star Performance Award, August 2022 : I was selected for this esteem award for delivering high quality solutions using Mulesoft technology at NTT Data North America(Apisero).</p></li>
-							<li><p>Apihana Certificate of Achievement : I was acknowledged for professionalism and willingness to go above and beyond
-								to support team members at NTT Data North America(Apisero).</p></li>
-						</ul>
-					
-
-						<h3>Publications</h3>
-						<ul>
-							<li><p>My paper - <a href="https://drive.google.com/file/d/1A8H9mbnxpqBAFFx5R7BmtX3W1xpc-jqb/view?usp=sharing">"Enhancing Software Requirements Quality:Ambiguity Detection and Resolution Using Large Language Models"</a> was published in The 2024 International Conference on Computational
-								Science and Computational Intelligence (CSCI'24)</p></li>
-						</ul>
-						
-					 </div>
-					<div class="row">
-						<!-- <div class="col-12">
-							<form method="post" action="#">
-								<div class="row">
-									<div class="col-6 col-12-small">
-										<input type="text" name="name" id="name" placeholder="Name" />
-									</div>
-									<div class="col-6 col-12-small">
-										<input type="text" name="email" id="email" placeholder="Email" />
-									</div>
-									<div class="col-12">
-										<input type="text" name="subject" id="subject" placeholder="Subject" />
-									</div>
-									<div class="col-12">
-										<textarea name="message" id="message" placeholder="Message"></textarea>
-									</div>
-									<div class="col-12">
-										<ul class="actions">
-											<li><input type="submit" value="Send Message" /></li>
-											<li><input type="reset" value="Clear Form" class="alt" /></li>
-										</ul>
-									</div>
-								</div>
-							</form>
-						</div>-->
-						<div class="col-12">
-							<hr />
-							<h3>Connect with me on ..</h3>
-							<br>
-							<ul class="social">
-								<!-- <li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li> -->
-								<li><a href="mailto:ankitzraj999@gmail.com" class="icon fas fa-envelope-open"><span class="label">Gmail</span></a></li>
-								<li><a href="https://www.instagram.com/ankit.the.raj/" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-								<li><a href="https://www.linkedin.com/in/ankitzraj/" class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
-								<!-- <li><a href="#" class="icon brands fa-tumblr"><span class="label">Tumblr</span></a></li>
-								<li><a href="#" class="icon brands fa-google-plus"><span class="label">Google+</span></a></li> -->
-								<li><a href="https://github.com/ankitraj999" class="icon brands fa-github"><span class="label">Github</span></a></li>
-								
-							</ul>
-							<hr />
-						</div>
-					</div> 
-					<footer>
-						<ul id="copyright">
-							<li>&copy; ankitzraj. All rights reserved.</li><li>Go to: <a href="#">Top</a></li>
-						</ul>
-					</footer>
-				</div>
-			</article>
-
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-
-	</body>
+        // Smooth scroll for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
 </html>
